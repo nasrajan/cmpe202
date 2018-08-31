@@ -18,5 +18,24 @@ public class GumballMachine extends Actor
     public void act() 
     {
         // Add your action code here.
+        List <Coin> intersectionList = getIntersectingObjects(Coin.class);
+       if (intersectionList.size() > 0)
+       {
+           this.getWorld().showText("Have coin", 367, 40); 
+           for (Coin coin : intersectionList) 
+           {
+                coin.getImage().setTransparency(0);
+           }
+        }
+        
+        if (Greenfoot.mouseClicked(this))
+        {
+           List<Alien> alienList =  this.getWorld().getObjects(Alien.class);
+           
+           for (Alien alien: alienList) 
+           {
+               //alien.turn(10);
+            }
+        }
     }    
 }
