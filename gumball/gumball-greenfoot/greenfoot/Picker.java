@@ -15,5 +15,6 @@ public class Picker extends Alien
     public void act() 
     {
         // Add your action code here.
+        this.setRotation(10);
     }    
 }
